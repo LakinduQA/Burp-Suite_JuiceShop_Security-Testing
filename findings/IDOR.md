@@ -7,7 +7,7 @@ An **Insecure Direct Object Reference** (IDOR) vulnerability was discovered in t
 
 ## Environment & Tools
 - OWASP Juice Shop (local or Docker): `docker run --rm -p 3000:3000 bkimminich/juice-shop`
-- Burp Suite (Community/Professional)
+- Burp Suite (Community Edition)
 - Browser configured to proxy through Burp Suite (`127.0.0.1:8080`)
 
 ---
@@ -28,7 +28,7 @@ An **Insecure Direct Object Reference** (IDOR) vulnerability was discovered in t
 ---
 
 ## Proof of Concept
-![Insecure Direct Object Reference](screenshots/IDOR - Intruder Attack.png)
+![Insecure Direct Object Reference](../screenshots/IDOR_Intruder_Attack.png)
 
 ---
 
