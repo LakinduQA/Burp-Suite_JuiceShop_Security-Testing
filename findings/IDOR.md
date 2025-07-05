@@ -28,7 +28,7 @@ An **Insecure Direct Object Reference** (IDOR) vulnerability was discovered in t
 ---
 
 ## Proof of Concept
-![Insecure Direct Object Reference](IDOR - Intruder Attack.png)
+![Insecure Direct Object Reference](screenshots/IDOR - Intruder Attack.png)
 
 ---
 
