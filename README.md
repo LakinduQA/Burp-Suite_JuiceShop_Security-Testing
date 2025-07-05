@@ -79,8 +79,8 @@ BurpSuite - SecTest/
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd "BurpSuite - SecTest"
+   git clone https://github.com/LakinduQA/Burp-Suite_JuiceShop_Security-Testing
+   cd Burp-Suite_JuiceShop_Security-Testing
    ```
 
 2. **Set up the testing environment**
