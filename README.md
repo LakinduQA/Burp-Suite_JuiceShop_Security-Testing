@@ -1,131 +1,94 @@
 # BurpSuite Security Testing Project
 
-This repository contains security testing documentation and findings from penetration testing activities conducted on the OWASP Juice Shop application using Burp Suite.
+<img src="https://img.shields.io/badge/Burp_Suite-Community-FF6633?logo=burp-suite&logoColor=white" alt="Burp Suite">
+<img src="https://img.shields.io/badge/OWASP_Top_10-2021-000000?logo=owasp&logoColor=white" alt="OWASP">
+<img src="https://img.shields.io/badge/Docker-Required-2496ED?logo=docker&logoColor=white" alt="Docker">
+<img src="https://img.shields.io/badge/Security-Penetration_Testing-red" alt="Security">
+<img src="https://img.shields.io/badge/Vulnerabilities-3_Found-orange" alt="Vulnerabilities">
+<img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT">
+<img src="https://img.shields.io/badge/Status-Active-success" alt="Status">
 
-## Project Overview
+Professional security testing documentation for web application vulnerabilities discovered in OWASP Juice Shop using Burp Suite.
 
-This project demonstrates various web application security vulnerabilities discovered through systematic penetration testing. The findings are documented with detailed reproduction steps, proof-of-concept screenshots, and remediation recommendations.
+## Overview
 
-## Project Structure
+Comprehensive penetration testing project demonstrating critical web application security vulnerabilities. Each finding includes detailed reproduction steps, visual proof-of-concept, OWASP classification, and remediation strategies.
+
+##  Project Structure
 
 ```
-BurpSuite - SecTest/
-├── findings/                    
-│   ├── IDOR.md                 
-│   ├── SensitiveDataLeakage.md 
-│   └── SQLi.md                 
-├── screenshots/                
-│   ├── IDOR_Intruder_Attack.png
-│   ├── Sensitive_Data_Leakage.png
-│   └── SQLi.jpg
-└── README.md                   
+├── findings/           # Detailed vulnerability reports
+├── screenshots/        # Proof-of-concept evidence
+└── README.md          # Project documentation
 ```
 
-## Vulnerabilities Discovered
+##  Vulnerabilities Discovered
 
-### 1. Insecure Direct Object Reference (IDOR)
-- **File**: [`findings/IDOR.md`](findings/IDOR.md)
-- **Endpoint**: `/rest/basket/{id}`
-- **Risk Level**: High
-- **OWASP**: A01:2021 – Broken Access Control
+| Vulnerability          | Severity    | OWASP    | Endpoint            | Report                                   |
+| ---------------------- | ----------- | -------- | ------------------- | ---------------------------------------- |
+| SQL Injection          |  Critical | A03:2021 | `/rest/user/login`  | [View](findings/SQLi.md)                 |
+| Sensitive Data Leakage |  Critical | A02:2021 | `/rest/memories`    | [View](findings/SensitiveDataLeakage.md) |
+| IDOR                   |  High     | A01:2021 | `/rest/basket/{id}` | [View](findings/IDOR.md)                 |
 
-### 2. Sensitive Data Leakage
-- **File**: [`findings/SensitiveDataLeakage.md`](findings/SensitiveDataLeakage.md)
-- **Endpoint**: `/rest/memories`
-- **Risk Level**: Critical
-- **OWASP**: A02:2021 – Cryptographic Failures
+##  Quick Start
 
-### 3. SQL Injection
-- **File**: [`findings/SQLi.md`](findings/SQLi.md)
-- **Endpoint**: `/rest/user/login`
-- **Risk Level**: Critical
-- **OWASP**: A03:2021 – Injection
+### Prerequisites
 
-## Testing Environment
+- Docker installed
+- Burp Suite Community Edition
+- Web browser with proxy support
 
-- **Target Application**: OWASP Juice Shop
-- **Testing Tool**: Burp Suite (Community Edition)
-- **Setup**: `docker run --rm -p 3000:3000 bkimminich/juice-shop`
-- **Proxy Configuration**: `127.0.0.1:8080`
-
-## Testing Methodology
-
-1. **Reconnaissance**: Application mapping and endpoint discovery
-2. **Vulnerability Assessment**: Systematic testing using Burp Suite tools:
-   - Proxy for traffic interception
-   - Intruder for automated attacks
-   - Repeater for manual testing
-3. **Exploitation**: Proof-of-concept development
-4. **Documentation**: Detailed reporting with screenshots and remediation steps
-
-## Key Features
-
-- Detailed vulnerability descriptions
-- Step-by-step reproduction guides
-- Visual proof-of-concept screenshots
-- Business impact assessments
-- OWASP Top 10 classification
-- Comprehensive remediation recommendations
-
-## Risk Assessment Summary
-
-| Vulnerability | Severity | OWASP Category | Status |
-|---------------|----------|----------------|---------|
-| SQL Injection | Critical | A03:2021 | Documented |
-| Sensitive Data Leakage | Critical | A02:2021 | Documented |
-| IDOR | High | A01:2021 | Documented |
-
-## Quick Start
+### Setup
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/LakinduQA/Burp-Suite_JuiceShop_Security-Testing
    cd Burp-Suite_JuiceShop_Security-Testing
    ```
 
-2. **Set up the testing environment**
+2. **Launch target application**
+
    ```bash
    docker run --rm -p 3000:3000 bkimminich/juice-shop
    ```
 
 3. **Configure Burp Suite**
-   - Set proxy to `127.0.0.1:8080`
-   - Configure browser to use Burp proxy
+   - Proxy: `127.0.0.1:8080`
+   - Configure browser proxy settings
 
-4. **Review findings**
-   - Navigate to the `findings/` directory
-   - Open any `.md` file to view detailed vulnerability reports
+4. **Review findings** → Navigate to [`findings/`](findings/) directory
 
-## Documentation Standards
+##  Testing Methodology
+
+- **Reconnaissance** → Application mapping and endpoint discovery
+- **Assessment** → Burp Suite tools (Proxy, Intruder, Repeater)
+- **Exploitation** → Proof-of-concept development
+- **Documentation** → Comprehensive reporting with evidence
+
+##  Report Structure
 
 Each vulnerability report includes:
-- **Description**: Technical details of the vulnerability
-- **Environment & Tools**: Setup requirements
-- **Steps to Reproduce**: Detailed reproduction guide
-- **Proof of Concept**: Visual evidence with screenshots
-- **Impact**: Technical and business impact analysis
-- **Remediation**: Specific mitigation recommendations
 
-## Security Considerations
+- Technical description and attack vectors
+- Step-by-step reproduction guide
+- Visual proof-of-concept with screenshots
+- Business and technical impact analysis
+- OWASP Top 10 classification
+- Remediation recommendations
 
-**Important**: This project is for educational and authorized testing purposes only. Do not use these techniques against systems without explicit permission.
+##  Disclaimer
 
-## Project Timeline
+**For Educational and Authorized Testing Only**
 
-- **Started**: July 5, 2025
-- **Last Updated**: July 5, 2025
-- **Current Phase**: Vulnerability Discovery & Documentation
+This project demonstrates security testing techniques on authorized systems. Unauthorized access to computer systems is illegal. Always obtain explicit permission before conducting security assessments.
+
+##  License
+
+MIT License - See LICENSE file for details
 
 ---
 
-## Project Status
-
-**This is an ongoing project and is not yet complete.** Additional vulnerabilities may be discovered and documented as testing continues. Future updates will include:
-
-- Additional vulnerability findings
-- Advanced exploitation techniques
-- Automated testing scripts
-- Comprehensive security assessment report
-- Risk mitigation strategies
-
-*Last updated: July 5, 2025*
+**Target Application:** OWASP Juice Shop  
+**Last Updated:** July 5, 2025  
+**Status:** Active Development
