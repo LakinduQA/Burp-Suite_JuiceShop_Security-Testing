@@ -1,18 +1,14 @@
 # BurpSuite Security Testing Project
 
-<img src="https://img.shields.io/badge/Burp_Suite-Community-FF6633?logo=burp-suite&logoColor=white" alt="Burp Suite">
-<img src="https://img.shields.io/badge/OWASP_Top_10-2021-000000?logo=owasp&logoColor=white" alt="OWASP">
-<img src="https://img.shields.io/badge/Docker-Required-2496ED?logo=docker&logoColor=white" alt="Docker">
-<img src="https://img.shields.io/badge/Security-Penetration_Testing-red" alt="Security">
-<img src="https://img.shields.io/badge/Status-Active-success" alt="Status">
+<img src="https://img.shields.io/badge/Burp_Suite-Community-FF6633?logo=burp-suite&logoColor=white" alt="Burp Suite"> <img src="https://img.shields.io/badge/OWASP_Top_10-2021-000000?logo=owasp&logoColor=white" alt="OWASP"> <img src="https://img.shields.io/badge/Docker-Required-2496ED?logo=docker&logoColor=white" alt="Docker"> <img src="https://img.shields.io/badge/Security-Penetration_Testing-red" alt="Security"> <img src="https://img.shields.io/badge/Status-Active-success" alt="Status">
 
-Professional security testing documentation for web application vulnerabilities discovered in OWASP Juice Shop using Burp Suite.
+> Professional security testing documentation for web application vulnerabilities discovered in OWASP Juice Shop using Burp Suite.
 
 ## Overview
 
 Comprehensive penetration testing project demonstrating critical web application security vulnerabilities. Each finding includes detailed reproduction steps, visual proof-of-concept, OWASP classification, and remediation strategies.
 
-##  Project Structure
+## Project Structure
 
 ```
 ├── findings/           # Detailed vulnerability reports
@@ -20,15 +16,15 @@ Comprehensive penetration testing project demonstrating critical web application
 └── README.md          # Project documentation
 ```
 
-##  Vulnerabilities Discovered
+## Vulnerabilities Discovered
 
-| Vulnerability          | Severity    | OWASP    | Endpoint            | Report                                   |
-| ---------------------- | ----------- | -------- | ------------------- | ---------------------------------------- |
-| SQL Injection          |  Critical | A03:2021 | `/rest/user/login`  | [View](findings/SQLi.md)                 |
-| Sensitive Data Leakage |  Critical | A02:2021 | `/rest/memories`    | [View](findings/SensitiveDataLeakage.md) |
-| IDOR                   |  High     | A01:2021 | `/rest/basket/{id}` | [View](findings/IDOR.md)                 |
+| Vulnerability          | Severity | OWASP    | Endpoint            | Report                                   |
+| ---------------------- | -------- | -------- | ------------------- | ---------------------------------------- |
+| SQL Injection          | Critical | A03:2021 | `/rest/user/login`  | [View](findings/SQLi.md)                 |
+| Sensitive Data Leakage | Critical | A02:2021 | `/rest/memories`    | [View](findings/SensitiveDataLeakage.md) |
+| IDOR                   | High     | A01:2021 | `/rest/basket/{id}` | [View](findings/IDOR.md)                 |
 
-##  Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -57,14 +53,14 @@ Comprehensive penetration testing project demonstrating critical web application
 
 4. **Review findings** → Navigate to [`findings/`](findings/) directory
 
-##  Testing Methodology
+## Testing Methodology
 
 - **Reconnaissance** → Application mapping and endpoint discovery
 - **Assessment** → Burp Suite tools (Proxy, Intruder, Repeater)
 - **Exploitation** → Proof-of-concept development
 - **Documentation** → Comprehensive reporting with evidence
 
-##  Report Structure
+## Report Structure
 
 Each vulnerability report includes:
 
@@ -75,13 +71,13 @@ Each vulnerability report includes:
 - OWASP Top 10 classification
 - Remediation recommendations
 
-##  Disclaimer
+## Disclaimer
 
 **For Educational and Authorized Testing Only**
 
 This project demonstrates security testing techniques on authorized systems. Unauthorized access to computer systems is illegal. Always obtain explicit permission before conducting security assessments.
 
-##  License
+## License
 
 MIT License - See LICENSE file for details
 
